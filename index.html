@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="script.js"></script>
+    <title>Get Notes</title>
+</head>
+<body id="body" class="antialiased ease-linear duration-500 ">
+
+
+
+    <!-- Navbar -->
+    <header class=" w-screen md:flex md:justify-between md:px-8 text-center md:h-14 py-2">
+        <div class="flex w-screen justify-between items-center px-6">
+            <h1 class="text-2xl capitalize">
+                Get Notes
+            </h1>
+            <button type="button" onclick="myFunction()" class="py-4 md:hidden">
+                <i class="fas fa-align-right"></i>
+            </button>
+        </div>
+        <div class="hidden content-center items-center md:flex">
+            <nav class="">
+                <ul class="flex">
+                    <li>
+                        <a href="index.html" class="active font-sans uppercase">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="text-neutral-00 font-sans uppercase">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="text-neutral-00 font-sans uppercase">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Mobile Menu -->   
+        <div id="mobile-menu" class="uppercase h-screen w-screen md:hidden">
+            <nav>
+                <ul class="grid justify-center items-center content-center text-center space-y-8 py-12">
+                    <li>
+                        <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <svg class="bg-svg absolute hidden md:block -z-50" id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 230" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(62, 147.957, 243, 1)" offset="0%"></stop><stop stop-color="rgba(11, 226.069, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,115L40,118.8C80,123,160,130,240,111.2C320,92,400,46,480,26.8C560,8,640,15,720,42.2C800,69,880,115,960,138C1040,161,1120,161,1200,134.2C1280,107,1360,54,1440,34.5C1520,15,1600,31,1680,30.7C1760,31,1840,15,1920,19.2C2000,23,2080,46,2160,80.5C2240,115,2320,161,2400,164.8C2480,169,2560,130,2640,95.8C2720,61,2800,31,2880,26.8C2960,23,3040,46,3120,53.7C3200,61,3280,54,3360,42.2C3440,31,3520,15,3600,15.3C3680,15,3760,31,3840,34.5C3920,38,4000,31,4080,53.7C4160,77,4240,130,4320,145.7C4400,161,4480,138,4560,115C4640,92,4720,69,4800,80.5C4880,92,4960,138,5040,157.2C5120,176,5200,169,5280,172.5C5360,176,5440,192,5520,164.8C5600,138,5680,69,5720,34.5L5760,0L5760,230L5720,230C5680,230,5600,230,5520,230C5440,230,5360,230,5280,230C5200,230,5120,230,5040,230C4960,230,4880,230,4800,230C4720,230,4640,230,4560,230C4480,230,4400,230,4320,230C4240,230,4160,230,4080,230C4000,230,3920,230,3840,230C3760,230,3680,230,3600,230C3520,230,3440,230,3360,230C3280,230,3200,230,3120,230C3040,230,2960,230,2880,230C2800,230,2720,230,2640,230C2560,230,2480,230,2400,230C2320,230,2240,230,2160,230C2080,230,2000,230,1920,230C1840,230,1760,230,1680,230C1600,230,1520,230,1440,230C1360,230,1280,230,1200,230C1120,230,1040,230,960,230C880,230,800,230,720,230C640,230,560,230,480,230C400,230,320,230,240,230C160,230,80,230,40,230L0,230Z"></path></svg>
+
+
+
+    <!-- Toggle Dark-Mode -->
+    <div class=" md:flex justify-center font-sans text-lg absolute">
+       <div class="flex w-screen md:justify-end md:pr-14 items-center content-center py-6 justify-center">
+            Light
+            <form>
+                <input onclick="toggle(this.form)" id="checkbox" name="checkbox" type="checkbox"/>
+                <label for="checkbox">
+                </label>
+            </form>
+            Dark
+       </div>
+    </div>
+
+
+
+    <!-- Welcome Section -->
+    <section class="h-screen ">
+        <div class="flex justify-center items-center h-screen">
+            <h1 class="mx-4 sm:mx-6 md:mx-8 capitalize text-xl lg:text-3xl md:text-2xl text-center grid justify-center">
+                Welcome ! Get All the avaliable notes of winter semester at one place.
+                <button onclick="window.location.href='#content'" id="button" class="bg-gradient-to-tr from-red-500 to-orange-400 text-white px-6 py-2 rounded-full shadow-lg font-sans text-base">
+                    <i class="animate-bounce-left fas fa-angle-double-right mx-2"></i> explore <i class="fas fa-angle-double-left mx-2 animate-bounce-right"></i>
+                </button>
+            </h1>
+        </div>
+    </section>
+
+
+
+    <!-- Content Section -->
+    <section id="content" class=" md:h-full items-center">
+        <div class="flex md:h-full flex-wrap justify-center items-center capitalize list-none">
+            <li onclick="window.location.href='pages/calculus-and-laplace-transformations.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/calculus.png" alt="" srcset="">
+                <h1>
+                    calculus and laplace transformations
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/engineering-physics.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/physics.png" alt="" srcset="">
+                <h1>
+                    engineering physics
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/fundamentals-of-ai-and-ml.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/ai and ml.png" alt="" srcset="">
+                <h1>
+                    fundamentals of AI and ML
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/technology-enterpreneurship.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/te.png" alt="" srcset="">
+                <h1>
+                    technology enterpreneurship
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/principals-of-management.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/pom.png" alt="" srcset="">
+                <h1>
+                    principles of management and organisational behaviour
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/effective-technical-communication.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/technical communication.png" alt="" srcset="">
+                <h1>
+                    Effective Technical Communication
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/computational-chemistry.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/cc.png" alt="" srcset="">
+                <h1>
+                    Introduction To Computational Chemistry
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/digital-logic-design.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/dld.png" alt="" srcset="">
+                <h1>
+                    Digital Logic Design
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/electric-circuit-and-systems.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/ec.png" alt="" srcset="">
+                <h1>
+                    electric circuit and system
+                </h1>
+            </li>
+            <li onclick="window.location.href='pages/problem-solving-and-programming.html'" class="w-52 md:h-64 text-center mx-6 p-4 rounded-2xl my-6 hover:scale-90 hover:cursor-pointer">
+                <img src="assets/intro to programming.png" alt="" srcset="">
+                <h1>
+                    Introduction To Problem solving and programming
+                </h1>
+            </li>
+        </ul>
+    </section>
+
+    <section class="h-1/2 my-24 mb-8 mt-4 mx-6" id="under-construction">
+        <div class=" h-1/2 lg:w-1/2 mx-auto text-center">
+            <div class="">
+                <img class="w-96 mx-auto " src="assets/Maintenance-bro.svg" alt="">
+            </div>
+            <div class="mb-28 capitalize">
+                <h1 class="mb-4  text-3xl lg:text-4xl font-bold text-indigo-500 font-sans"> WEBSITE UNDER DEVELOPMENT</h1>
+                " Contact Us If You Face Any Difficulties While Accessing The Notes Your Feedbacks And Suggestion Will Be Appreciated. Only Mail's Received from VIT Bhopal University Mail ID will Be considered"
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-center py-4 md:py-3 font-sans">
+        <div>
+            &copy; TeamShinchan
+        </div>
+    </footer>
+</body>
+</html>

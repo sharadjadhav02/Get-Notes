@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="../script.js"></script>
+    <title>Principles of Management and Organisational Behaviour</title>
+</head>
+<body id="body" class="antialiased ease-linear duration-500 ">
+
+
+    <!-- Navbar -->
+    <header class=" w-screen md:flex md:justify-between md:px-8 text-center md:h-14 py-2">
+        <div class="flex w-screen justify-between items-center px-6">
+            <h1 class="text-2xl capitalize">
+                Get Notes
+            </h1>
+            <button type="button" onclick="myFunction()" class="py-4 md:hidden">
+                <i class="fas fa-align-right"></i>
+            </button>
+        </div>
+        <div class="hidden content-center items-center md:flex">
+            <nav class="">
+                <ul class="flex">
+                    <li>
+                        <a href="../index.html" class="font-sans uppercase">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.html" class="text-neutral-00 font-sans uppercase">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html" class="text-neutral-00 font-sans uppercase">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Mobile Menu -->   
+        <div id="mobile-menu" class="uppercase h-screen w-screen md:hidden">
+            <nav>
+                <ul class="grid justify-center items-center content-center text-center space-y-8 py-12">
+                    <li>
+                        <a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="bg-svg hidden lg:block absolute w-screen -z-50">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 216.129, 255, 1)" offset="0%"></stop><stop stop-color="rgba(11, 102.091, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,147L60,122.5C120,98,240,49,360,73.5C480,98,600,196,720,196C840,196,960,98,1080,98C1200,98,1320,196,1440,228.7C1560,261,1680,229,1800,212.3C1920,196,2040,196,2160,204.2C2280,212,2400,229,2520,196C2640,163,2760,82,2880,98C3000,114,3120,229,3240,253.2C3360,278,3480,212,3600,204.2C3720,196,3840,245,3960,285.8C4080,327,4200,359,4320,326.7C4440,294,4560,196,4680,171.5C4800,147,4920,196,5040,204.2C5160,212,5280,180,5400,179.7C5520,180,5640,212,5760,228.7C5880,245,6000,245,6120,261.3C6240,278,6360,310,6480,343C6600,376,6720,408,6840,408.3C6960,408,7080,376,7200,302.2C7320,229,7440,114,7560,122.5C7680,131,7800,261,7920,261.3C8040,261,8160,131,8280,65.3C8400,0,8520,0,8580,0L8640,0L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path></svg>
+    </section>
+
+
+
+    <!-- Toggle Dark-Mode -->
+    <div class=" md:flex justify-center font-sans text-lg">
+       <div class="flex w-screen md:justify-end md:pr-14 items-center content-center py-6 justify-center">
+            Light
+            <form>
+                <input onclick="toggle(this.form)" id="checkbox" name="checkbox" type="checkbox"/>
+                <label for="checkbox">
+                </label>
+            </form>
+            Dark
+       </div>
+    </div>
+
+
+
+    <!-- Content -->
+    <section class=" mx-auto my-12">
+        <div class="text-2xl xl:text-3xl flex flex-wrap justify-center items-center text-center">
+            <img class="w-44" src="../assets/pom.png" alt="" srcset="">
+            <h1>
+                Principles of Management and Organisational Behaviour
+            </h1>
+        </div>
+        <div class="flex justify-center my-4">
+            <button class="bg-gradient-to-tr from-red-400 to bg-orange-400 text-white px-4 py-2 rounded-full shadow-xl font-sans" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1OSyFdbsxy7tyyDGMaib_G-Y8Ai5rIUNJ'">Download Syllabus <i class="fas fa-download mx-2"></i></button>
+        </div>
+        <div class="list-none my-12 md:flex flex-wrap justify-center">
+            <div id="card" class="mx-auto my-4 lg:mx-10">
+                <h1>Recommended</h1>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="h-1/2 my-24 mb-8 mt-4 mx-6" id="under-construction">
+        <div class=" h-1/2 lg:w-1/2 mx-auto text-center">
+            <div class="">
+                <img class="w-96 mx-auto " src="../assets/Maintenance-bro.svg" alt="">
+            </div>
+            <div class="mb-28 capitalize">
+                <h1 class="mb-4  text-3xl lg:text-4xl font-bold text-indigo-500 font-sans"> WEBSITE UNDER DEVELOPMENT</h1>
+                " Contact Us If You Face Any Difficulties While Accessing The Notes Your Feedbacks And Suggestion Will Be Appreciated. Only Mail's Received from VIT Bhopal University Mail ID will Be considered"
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 md:py-3 font-sans">
+        <div>
+            &copy; TeamShinchan
+        </div>
+    </footer>
+</body>
+</html>

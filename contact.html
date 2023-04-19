@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="script.js"></script>
+    <title>Get Notes</title>
+</head>
+<body id="body" class="antialiased ease-linear duration-500 ">
+
+
+    <!-- Navbar -->
+    <header class=" w-screen md:flex md:justify-between md:px-8 text-center md:h-14 py-2">
+        <div class="flex w-screen justify-between items-center px-6">
+            <h1 class="text-2xl capitalize">
+                Get Notes
+            </h1>
+            <button type="button" onclick="myFunction()" class="py-4 md:hidden">
+                <i class="fas fa-align-right"></i>
+            </button>
+        </div>
+        <div class="hidden content-center items-center md:flex">
+            <nav class="">
+                <ul class="flex">
+                    <li>
+                        <a href="index.html" class="font-sans uppercase">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="text-neutral-00 font-sans uppercase">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="active text-neutral-00 font-sans uppercase">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Mobile Menu -->   
+        <div id="mobile-menu" class="uppercase h-screen w-screen md:hidden">
+            <nav>
+                <ul class="grid justify-center items-center content-center text-center space-y-8 py-12">
+                    <li>
+                        <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <svg class="bg-svg absolute -z-30 hidden md:block" id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 180" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 182, 243, 1)" offset="0%"></stop><stop stop-color="rgba(0, 143, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,144L40,132C80,120,160,96,240,99C320,102,400,132,480,144C560,156,640,150,720,126C800,102,880,60,960,54C1040,48,1120,78,1200,93C1280,108,1360,108,1440,105C1520,102,1600,96,1680,99C1760,102,1840,114,1920,120C2000,126,2080,126,2160,105C2240,84,2320,42,2400,33C2480,24,2560,48,2640,75C2720,102,2800,132,2880,120C2960,108,3040,54,3120,39C3200,24,3280,48,3360,63C3440,78,3520,84,3600,90C3680,96,3760,102,3840,114C3920,126,4000,144,4080,135C4160,126,4240,90,4320,69C4400,48,4480,42,4560,57C4640,72,4720,108,4800,126C4880,144,4960,144,5040,144C5120,144,5200,144,5280,129C5360,114,5440,84,5520,84C5600,84,5680,114,5720,129L5760,144L5760,180L5720,180C5680,180,5600,180,5520,180C5440,180,5360,180,5280,180C5200,180,5120,180,5040,180C4960,180,4880,180,4800,180C4720,180,4640,180,4560,180C4480,180,4400,180,4320,180C4240,180,4160,180,4080,180C4000,180,3920,180,3840,180C3760,180,3680,180,3600,180C3520,180,3440,180,3360,180C3280,180,3200,180,3120,180C3040,180,2960,180,2880,180C2800,180,2720,180,2640,180C2560,180,2480,180,2400,180C2320,180,2240,180,2160,180C2080,180,2000,180,1920,180C1840,180,1760,180,1680,180C1600,180,1520,180,1440,180C1360,180,1280,180,1200,180C1120,180,1040,180,960,180C880,180,800,180,720,180C640,180,560,180,480,180C400,180,320,180,240,180C160,180,80,180,40,180L0,180Z"></path></svg>
+
+
+    <!-- Toggle Dark-Mode -->
+    <div class=" md:flex justify-center font-sans text-lg py-6 md:py-0 lg:absolute">
+       <div class="flex w-screen md:justify-end md:pr-14 items-center content-center py-6 justify-center">
+            Light
+            <form>
+                <input onclick="toggle(this.form)" id="checkbox" name="checkbox" type="checkbox"/>
+                <label for="checkbox">
+                </label>
+            </form>
+            Dark
+       </div>
+    </div>
+
+
+
+
+    <section>
+        <div class="md:flex lg:h-screen lg:-mx-24 text-sm sm:text-base flex-wrap lg:content-center justify-center font-sans">
+            <div class="md:w-1/2 lg:flex flex-wrap lg:content-center justify-center space-y-7 break-all">
+                <div class="lg:flex mx-8 space-x-8 text-center">
+                    <p>
+                        Name: Chahat Upadhyay <br>
+                        Mail: chahatupadhyay2022@vitbhopal.ac.in
+                    </p>
+                    <button class="instagram-btn w-fit" onclick="window.location.href='https://www.instagram.com/chahatupadhyay56'">
+                        Instagram
+                    </button>
+                </div>
+                <div class="lg:flex mx-8 space-x-8 text-center">
+                    <p>
+                        Name: Divyansh Sharma <br>
+                        Mail: divyanshsharma2022@vitbhopal.ac.in
+                    </p>
+                    <button class="instagram-btn w-fit" onclick="window.location.href='https://www.instagram.com/dishevel_ds18'">
+                        Instagram
+                    </button>
+                </div>
+                <div class="lg:flex mx-8 space-x-8 text-center">
+                    <p>
+                        Name: Sharad Jadhav <br>
+                        Mail: sharadjadhav2022@vitbhopal.ac.in
+                    </p>
+                    <button class="instagram-btn w-fit" onclick="window.location.href='https://instagram.com/sharadjadhav670'">
+                        Instagram
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 mx-auto">
+                <img class="w-96 mx-auto" src="assets/Connected world.svg" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 md:py-3 font-sans">
+        <div>
+            &copy; TeamShinchan
+        </div>
+    </footer>
+</body>
+</html>

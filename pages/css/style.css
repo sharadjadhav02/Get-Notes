@@ -1,0 +1,72 @@
+/* body{
+    height: 100%;
+    background-image: url(/14547803_rm222batch3-mind-03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+} */
+
+
+section > div > h1{
+    text-transform: capitalize;
+    margin: 0 20px;
+}
+
+
+#card {
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: baseline;
+    background-color: var(--card-bg);
+    border: var(--card-border);
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+    text-align: center;
+    width: 13rem;
+    /* margin: 10px; */
+    padding: 10px 0px;
+    border-radius: 8px;
+}
+
+
+#card > a{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: dodgerblue;
+    text-align: center;
+    width: 12rem;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 6px;
+}
+
+#card a.isdisabled{
+    font-style: italic;
+    cursor:not-allowed;
+    color: grey;
+}
+
+#card > a.isdisabled:hover{
+    color: grey;
+    background: none;
+
+}
+
+#card > h1{
+    border-block-end: 1px solid grey;
+    padding: 0px 0px 8px 0px;
+}
+
+
+#card > a:hover{
+    transition: all 0.12s ease-in-out;
+    color: white;
+    background-color: dodgerblue;
+}
+
+section#content > div > #card > a:hover{
+    background-color: dodgerblue;
+    color: white;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="../script.js"></script>
+    <title>Electric Circuit and Systems</title>
+</head>
+<body id="body" class="antialiased ease-linear duration-500 ">
+
+    <!-- Navbar -->
+    <header class=" w-screen md:flex md:justify-between md:px-8 text-center md:h-14 py-2">
+        <div class="flex w-screen justify-between items-center px-6">
+            <h1 class="text-2xl capitalize">
+                Get Notes
+            </h1>
+            <button type="button" onclick="myFunction()" class="py-4 md:hidden">
+                <i class="fas fa-align-right"></i>
+            </button>
+        </div>
+        <div class="hidden content-center items-center md:flex">
+            <nav class="">
+                <ul class="flex">
+                    <li>
+                        <a href="../index.html" class="font-sans uppercase ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.html" class="text-neutral-00 font-sans uppercase ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html" class="text-neutral-00 font-sans uppercase ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Mobile Menu -->   
+        <div id="mobile-menu" class="uppercase h-screen w-screen md:hidden">
+            <nav>
+                <ul class="grid justify-center items-center content-center text-center space-y-8 py-12">
+                    <li>
+                        <a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path
+                                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                            <path
+                                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                        Home</a>
+                    </li>
+                    <li>
+                        <a href="../about.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mx-2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                        About</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 mx-2">
+                            <path fill-rule="evenodd"
+                                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                                clip-rule="evenodd" />
+                            </svg>
+                        Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="bg-svg hidden lg:block absolute w-screen -z-50">
+        <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 216.129, 255, 1)" offset="0%"></stop><stop stop-color="rgba(11, 102.091, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,196L48,204.2C96,212,192,229,288,245C384,261,480,278,576,253.2C672,229,768,163,864,163.3C960,163,1056,229,1152,220.5C1248,212,1344,131,1440,106.2C1536,82,1632,114,1728,138.8C1824,163,1920,180,2016,187.8C2112,196,2208,196,2304,212.3C2400,229,2496,261,2592,285.8C2688,310,2784,327,2880,310.3C2976,294,3072,245,3168,236.8C3264,229,3360,261,3456,269.5C3552,278,3648,261,3744,236.8C3840,212,3936,180,4032,187.8C4128,196,4224,245,4320,245C4416,245,4512,196,4608,147C4704,98,4800,49,4896,81.7C4992,114,5088,229,5184,253.2C5280,278,5376,212,5472,163.3C5568,114,5664,82,5760,65.3C5856,49,5952,49,6048,98C6144,147,6240,245,6336,294C6432,343,6528,343,6624,334.8C6720,327,6816,310,6864,302.2L6912,294L6912,490L6864,490C6816,490,6720,490,6624,490C6528,490,6432,490,6336,490C6240,490,6144,490,6048,490C5952,490,5856,490,5760,490C5664,490,5568,490,5472,490C5376,490,5280,490,5184,490C5088,490,4992,490,4896,490C4800,490,4704,490,4608,490C4512,490,4416,490,4320,490C4224,490,4128,490,4032,490C3936,490,3840,490,3744,490C3648,490,3552,490,3456,490C3360,490,3264,490,3168,490C3072,490,2976,490,2880,490C2784,490,2688,490,2592,490C2496,490,2400,490,2304,490C2208,490,2112,490,2016,490C1920,490,1824,490,1728,490C1632,490,1536,490,1440,490C1344,490,1248,490,1152,490C1056,490,960,490,864,490C768,490,672,490,576,490C480,490,384,490,288,490C192,490,96,490,48,490L0,490Z"></path></svg>
+    </section>
+
+
+    <!-- Toggle Dark-Mode -->
+    <div class=" md:flex justify-center font-sans text-lg">
+       <div class="flex w-screen md:justify-end md:pr-14 items-center content-center py-6 justify-center">
+            Light
+            <form>
+                <input onclick="toggle(this.form)" id="checkbox" name="checkbox" type="checkbox"/>
+                <label for="checkbox">
+                </label>
+            </form>
+            Dark
+       </div>
+    </div>
+
+
+
+    <!-- Content -->
+    <section class="mx-auto my-12">
+        <div class="text-2xl xl:text-3xl flex flex-wrap justify-center items-center text-center">
+            <img class="w-44" src="../assets/ec.png" alt="" srcset="">
+            <h1>
+                Electric Circuit and Systems
+            </h1>
+        </div>
+        <div class="flex justify-center my-4">
+            <button class="bg-gradient-to-tr from-red-400 to bg-orange-400 text-white px-4 py-2 rounded-full shadow-xl font-sans" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1M1LfSH0JCcTROYA0IVdm6K-ibgtLMT2e'">Download Syllabus <i class="fas fa-download mx-2"></i></button>
+        </div>
+        <div class="list-none my-12 md:flex flex-wrap justify-center">
+            <div id="card" class="mx-auto my-4 lg:mx-10">
+                <h1>Recommended</h1>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+                <a class="isdisabled" href="javascript:void(0)">Not Available !</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="my-24 mb-8 mt-4 mx-6" id="under-construction">
+        <div class="lg:w-1/2 mx-auto text-center">
+            <div class="">
+                <img class="w-96 mx-auto " src="../assets/Maintenance-bro.svg" alt="">
+            </div>
+            <div class="mb-28 capitalize">
+                <h1 class="mb-4  text-3xl lg:text-4xl font-bold text-indigo-500 font-sans"> WEBSITE UNDER DEVELOPMENT</h1>
+                " Contact Us If You Face Any Difficulties While Accessing The Notes Your Feedbacks And Suggestion Will Be Appreciated. Only Mail's Received from VIT Bhopal University Mail ID will Be considered"
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 md:py-3 font-sans">
+        <div>
+            &copy; TeamShinchan
+        </div>
+    </footer>
+</body>
+</html>
